@@ -34,13 +34,21 @@
     </p>
     <p>
         ......... <br>
-        Saya ucapkan terimakasih kepada bapak/ibu dosen yang telah bersedia hadir di acara seminar proposal pada pagi
+        Saya ucapkan terimakasih kepada
+        @if ($data[3] == "bapak" && $data[5] == "bapak" && $data[7] == "bapak" && $data[9] == "bapak")
+            Bapak
+        @elseif ($data[3] == "ibu" && $data[5] == "ibu" && $data[7] == "ibu" && $data[9] == "ibu")
+            Ibu
+        @else
+            Bapak & Ibu
+        @endif
+        dosen yang telah bersedia hadir di acara seminar proposal pada pagi
         hari
         ini,
     </p>
     <p>
         ......... <br>
-        Sebelumnya, ijinkan saya untuk memperkenalkan diri terlebih dahulu, saya {{ $data[0] }} kamu selaku
+        Sebelumnya, ijinkan saya untuk memperkenalkan diri terlebih dahulu, saya {{ $data[0] }} selaku
         moderator pada
         Seminar proposal kali ini,
     </p>
@@ -77,9 +85,7 @@
     <p>
         ......... <br>
         Selanjutnya saya persilahkan kepada dosen pembahas kedua
-        {{ $data[9] }} {{ $data[10] }} untuk memberikan pertanyaan atau tanggapannya kepada {{ $data[1] }}
-        Nama
-        mahasiswa sempro
+        {{ $data[9] }} {{ $data[10] }} untuk memberikan pertanyaan atau tanggapannya kepada {{ $data[1] }} {{ $data[2] }}
     </p>
     <p>
         ......... <br>
@@ -88,8 +94,7 @@
     </p>
     <p>
         ......... <br>
-        selanjutnya, saya persilahkan kepada {{ $data[3] }} {{ $data[4] }} dan Bapak/Ibu Nama
-        dosen
+        selanjutnya, saya persilahkan kepada {{ $data[3] }} {{ $data[4] }} dan
         {{ $data[5] }} {{ $data[6] }} selaku dosen pembimbing jika ada yang ingin ditambahkan
     </p>
     <p>
@@ -103,13 +108,11 @@
     <p>
         ......... <br>
         (kalou tidak ada tanggapan audiens)
-        baik apabila dari audiens tidak ada yang memberikan tanggapannya, maka dipersilahkan untuk {{ $data[1] }} Nama
-        mahasiswa
+        baik apabila dari audiens tidak ada yang memberikan tanggapannya, maka dipersilahkan untuk {{ $data[1] }} {{ $data[2] }}
         sempro untuk menutup presentasinya.
 
         (kalok ada tanggapan audiens)
-        baik kami persilahkan untuk sadara/i nama audiens untuk memberikan tanggapan kepada {{ $data[1] }} Nama mahasiswa
-        sempro
+        baik kami persilahkan untuk sadara/i nama audiens untuk memberikan tanggapan kepada {{ $data[1] }} {{ $data[2] }}
     </p>
     <p>
         ......... <br>
@@ -126,12 +129,12 @@
         membagikan
         dalam bentuk softfile tetapi kami akan mengirimkan link record seminar proposal pada hari ini dikarenakan ada
         beberapa
-        hal yang akan merugikan pihak {{ $data[1] }} {{ $data[2] }}
+        hal yang akan merugikan pihak dari {{ $data[1] }} {{ $data[2] }}
     </p>
     <p>
         ......... <br>
-        Demikian seminar proposal pada pagi hari ini, saya selaku moderator pamit undur diri, jika ada kurang lebihnya
-        perkataan saya, saya mohon maaf yang sebesar besarnya.
+        Demikian seminar proposal pada pagi hari ini, saya selaku moderator pamit undur diri, jika ada kurang atau lebihnya
+        dari perkataan saya, saya mohon maaf yang sebesar besarnya.
     </p>
 
     <p>
